@@ -1,6 +1,6 @@
 - webpack4 react redux axios
 - 本地数据 mock
-- 路由配置文件
+- 模拟谷歌灭霸
 
 ``` js
 
