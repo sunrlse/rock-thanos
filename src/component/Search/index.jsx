@@ -37,14 +37,17 @@ class ResultsList extends Component {
             layers = [],
             layerImageDatas = [],
             df = document.createDocumentFragment()
+
         for (let i = 0; i < NUM; i++) {
             let oCanvas = document.createElement('canvas')
             oCanvas.style.width = width + 'px'
             oCanvas.style.height = height + 'px'
             let oCtx = oCanvas.getContext('2d')
-            // oCtx.rect(0, 0, width, height)
-            // oCtx.fill()
             let oImageData = oCtx.createImageData(width, height)
+            let len = oImageData.data.length
+            for (let i = 0; i < len; i++) {
+              oImageData.data[i] = 255
+            }
             layers.push(oCanvas)
             layerImageDatas.push(oImageData)
         }
